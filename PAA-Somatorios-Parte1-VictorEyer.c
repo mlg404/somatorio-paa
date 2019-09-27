@@ -105,6 +105,4 @@ void main(){
     //exercício g
     printf("\nResposta letra g: %d", g(matriz,m));
 
-
-    
 }
