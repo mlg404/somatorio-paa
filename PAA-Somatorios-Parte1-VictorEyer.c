@@ -41,7 +41,7 @@ int e(int **matriz, int m){
     int i, j,soma=0;
     for (i = 0; i < m; i++){
         for (j = 0; j < i; j++){
-            soma += matriz[i][j];
+            soma += matriz[j][i];
         }
     }
     return soma;
