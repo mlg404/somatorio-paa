@@ -1,28 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int a(int **matriz, int m){
+int a(int **matriz, int m, int n){
     int i, j,soma=0;
     for (i = 0; i < m; i++){
-        for (j = 0; j < m; j++){
+        for (j = 0; j < n; j++){
             soma += matriz[i][j];
         }
     }
     return soma;
 }
-int b(int **matriz, int m){
+int b(int **matriz, int m, int n){
     int i, j,soma=0;
     for (i = 0; i < m; i++){
-        for (j = 0; j < m; j++){
+        for (j = 0; j < n; j++){
             soma += matriz[j][i];
         }
     }
     return soma;
 }
-int c(int **matriz, int m){
+int c(int **matriz, int m, int n){
     int i, j,soma=0;
     for (i = 0; i < m; i++){
-        for (j = 0; j < m; j++){
+        for (j = 0; j < n; j++){
            if (i != j){
                soma += matriz[i][j];
            }
@@ -33,11 +33,7 @@ int c(int **matriz, int m){
 int d(int **matriz, int m){
     int i, j,soma=0;
     for (i = 0; i < m; i++){
-        for (j = 0; j < m; j++){
-           if (i == j){
-               soma += matriz[j][i];
-           }
-        }
+            soma += matriz[i][i];
     }
     return soma;
 }
@@ -50,7 +46,16 @@ int e(int **matriz, int m){
     }
     return soma;
 }
-int f(int **matriz, int m){
+int f(int **matriz, int m, int n){
+    int i, j,soma=0;
+    for (i = 0; i < m; i++){
+        for (j = i; j < n; j++){
+            soma += matriz[i][j];
+        }
+    }
+    return soma;
+}
+int g(int **matriz, int m){
     int i, j,soma=0;
     for (i = 0; i < m; i++){
         for (j = 0; j < i; j++){
